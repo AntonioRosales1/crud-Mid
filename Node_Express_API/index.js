@@ -1,6 +1,5 @@
 import bodyParser from 'body-parser';
-
-const express = require('express');
+import { Express } from 'express';
 
 
 const app = express();
