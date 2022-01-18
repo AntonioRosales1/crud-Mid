@@ -1,3 +1,12 @@
+fetch('http://localhost:5000/').then((resp)=>{
+return resp.json();
+}).then((dat)=>{
+    console.log(dat.msg);  
+})
+
+
+
+
 var selectedRow = null
 
 function onFormSubmit() {

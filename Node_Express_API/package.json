@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
@@ -19,6 +18,7 @@
   },
   "homepage": "https://github.com/AntonioRosales1/crud-Mid#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2"
   },
   "devDependencies": {
