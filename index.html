@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+<div class="clock">
+    <h1>Clock In/Out</h1>
+</div>
+
     <table>
         <tr>
             <td>
@@ -22,16 +26,21 @@
                         <input type="text" name="empCode" id="empCode">
                     </div>
                     <div>
-                        <label>Salary</label>
-                        <input type="text" name="salary" id="salary">
+                        <label>Position</label>
+                        <input type="text" name="Position" id="Position">
                     </div>
                     <div>
-                        <label>City</label>
-                        <input type="text" name="city" id="city">
+                        <label>Date</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div>
+                        <label>Date</label>
+                        <input type="Time" name="Time" id="time">
                     </div>
                     <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
+                    
                 </form>
             </td>
             <td>
@@ -40,9 +49,9 @@
                         <tr>
                             <th>Full Name</th>
                             <th>EMP Code</th>
-                            <th>Salary</th>
-                            <th>City</th>
-                            <th></th>
+                            <th>Position</th>
+                            <th>Date</th>
+                            <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,5 +63,6 @@
     </table>
     <script src="script.js"></script>
 </body>
+
 
 </html> 
