@@ -1,5 +1,12 @@
+body{
+    background-color: blue;
+}
+.clock{
+background-color: rgb(87, 163, 214);
+}
 body > table{
     width: 80%;
+    background-color: rgb(87, 163, 214);
 }
 
 table{

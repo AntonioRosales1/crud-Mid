@@ -4,7 +4,7 @@ return resp.json();
     console.log(dat.msg);  
 })
 
-
+ 
 
 
 var selectedRow = null
@@ -24,8 +24,9 @@ function readFormData() {
     var formData = {};
     formData["fullName"] = document.getElementById("fullName").value;
     formData["empCode"] = document.getElementById("empCode").value;
-    formData["salary"] = document.getElementById("salary").value;
-    formData["city"] = document.getElementById("city").value;
+    formData["Position"] = document.getElementById("Position").value;
+    formData["date"] = document.getElementById("date").value;
+    formData["time"] = document.getElementById("time").value;
     return formData;
 }
 
@@ -37,19 +38,22 @@ function insertNewRecord(data) {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.empCode;
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.salary;
+    cell3.innerHTML = data.Position;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.city;
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell4.innerHTML = data.date;
+    cell5 = newRow.insertCell(4);
+    cell5.innerHTML = data.time;
+    cell6 = newRow.insertCell(5);
+    cell6.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("empCode").value = "";
-    document.getElementById("salary").value = "";
-    document.getElementById("city").value = "";
+    document.getElementById("Position").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("time").value = "";
     selectedRow = null;
 }
 
@@ -57,14 +61,16 @@ function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
     document.getElementById("empCode").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("salary").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("Position").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("date").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("time").value = selectedRow.cells[4].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.fullName;
     selectedRow.cells[1].innerHTML = formData.empCode;
     selectedRow.cells[2].innerHTML = formData.salary;
-    selectedRow.cells[3].innerHTML = formData.city;
+    selectedRow.cells[3].innerHTML = formData.date;
+    selectedRow.cells[4].innerHTML = formData.time;
 }
 
 function onDelete(td) {

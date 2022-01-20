@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.use('/',(req,res)=>{
     res.json({
-        msg:'Hey their!'
+        msg:'Work'
     })
 });
 
